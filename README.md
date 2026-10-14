@@ -16,7 +16,7 @@ I also created a REST API to test the Sudoku solver using Postman. The project i
 - **REST API:** Allows users to solve Sudoku puzzles by sending a GET request through Postman.
 - **Exception Handling:** Handles missing files, invalid characters, and incorrect Sudoku values with error messages.
 
-- # Sudoku Solver
+# Sudoku Solver
 
 This project is a Sudoku solver built using Java and Spring Boot. It uses recursion and backtracking to solve Sudoku puzzles by checking the numbers in each row, column, and 3x3 box.
 
