@@ -56,3 +56,25 @@ I also created a REST API to test the Sudoku solver using Postman. The project i
 5. The solved Sudoku board will appear in the response, and the solution will be saved as `puzzle1.solution.txt`.
 
 You can also test `puzzle2.txt`, `puzzle3.txt`, and `puzzle4.txt` by changing the filename.
+
+## Error Handling
+
+The project includes two custom exceptions to handle errors when loading Sudoku puzzles.
+
+- **InvalidCharacterException:** Handles invalid characters, numbers outside 0–9, incomplete puzzles, and extra values. The API returns `400 Bad Request`.
+- **SudokuFileNotFoundException:** Handles missing puzzle files. The API returns `404 Not Found`.
+
+I also used `SudokuExceptionHandler` to return the error messages when testing the API in Postman.
+
+### Testing the Exceptions
+
+You can test the error handling using these filenames:
+
+| File | Expected Result |
+|---|---|
+| `test/invalidPuzzle.txt` | 400 Bad Request |
+| `test/incompletePuzzle.txt` | 400 Bad Request |
+| `test/extraValuesPuzzle.txt` | 400 Bad Request |
+| `missing.txt` | 404 Not Found |
+
+The test files are stored inside the `puzzles/test` folder.
