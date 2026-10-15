@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112641">
+  <meta name="description" content="A quiet space for a sharp mind. Play, save, and solve Sudoku with Sudoku Studio.">
+  <title>Sudoku Studio — A little focus goes a long way.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Sudoku Studio home"><span class="brand-mark" aria-hidden="true">S<span>·</span></span> sudoku<span class="brand-light">studio</span></a>
+    <span class="header-note"><span class="live-dot"></span> A SPACE TO THINK</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">THE DAILY ART OF PAYING ATTENTION</p><h1 id="page-title">Find your <em>focus.</em></h1></div>
+      <p class="intro-note">Nine rows. Nine columns.<br>One satisfying moment of clarity.</p>
+    </section>
+    <section class="studio" aria-label="Sudoku game">
+      <div class="play-area">
+        <div class="board-toolbar">
+          <div><span class="small-label">YOUR SESSION</span><span id="puzzle-label">Preparing your puzzle</span></div>
+          <button id="pause" class="timer-button" aria-label="Pause game"><span aria-hidden="true" id="pause-symbol">Ⅱ</span> <span id="timer">00:00</span></button>
+        </div>
+        <div class="board-wrap" id="board-wrap">
+          <div id="board" class="board" role="group" aria-label="Sudoku board"></div>
+          <div class="board-overlay" id="board-overlay"><span class="overlay-kicker">SUDOKU STUDIO</span><strong id="overlay-title">A moment of focus.</strong><p id="overlay-message">Connecting to your Java solver…</p><button id="overlay-action" class="button primary" hidden>Try again</button></div>
+        </div>
+        <div class="board-caption"><span><span class="legend-dot"></span> Original clues <span class="legend-dot entry-dot"></span> Your entries</span><span id="progress-text">0 of 81 filled</span></div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+      </div>
+      <aside class="controls" aria-label="Game controls">
+        <div class="panel-heading"><span class="eyebrow">MAKE ROOM FOR A CHALLENGE</span><h2>Your next move.</h2><p>Settle in. Take it one square at a time.</p></div>
+        <fieldset id="difficulty-options"><legend class="small-label">01 / CHOOSE YOUR PACE</legend><div class="difficulty-tabs"><button type="button" data-difficulty="easy" aria-pressed="true">Easy</button><button type="button" data-difficulty="medium" aria-pressed="false">Medium</button><button type="button" data-difficulty="hard" aria-pressed="false">Hard</button></div></fieldset>
+        <div class="number-section"><p class="small-label">02 / FIND YOUR NUMBER</p><div class="number-pad" id="number-pad" aria-label="Number pad"></div><div class="tools"><button id="erase"><span aria-hidden="true">⌫</span> Erase</button><button id="hint"><span aria-hidden="true">✧</span> Hint <span id="hint-count" class="count">0</span></button></div></div>
+        <div class="game-actions"><button class="button primary" id="check">Check solution <span aria-hidden="true">↗</span></button><button class="button secondary" id="new-game">New game <span aria-hidden="true">↻</span></button></div>
+        <div class="save-actions"><button id="save">Save game</button><span aria-hidden="true">/</span><button id="load">Load saved game</button></div>
+        <p id="save-note" class="save-note">Your saved game stays in this browser.</p>
+        <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Welcome. Your next moment of clarity awaits.</div>
+      </aside>
+    </section>
+    <section class="bottom-note" aria-label="How to play"><span class="note-number">01—09</span><p>Every number has its place.<br><span>Fill each row, column, and 3×3 box with 1–9, without repeats.</span></p><p class="keyboard-note"><kbd>1</kbd>–<kbd>9</kbd> to enter <span>·</span> <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> to move <span>·</span> <kbd>Del</kbd> to erase</p></section>
+  </main>
+  <footer><span>SUDOKU STUDIO</span><span>A little focus goes a long way.</span><span>POWERED BY YOUR JAVA SOLVER</span></footer>
+  <dialog id="confirm-dialog" aria-labelledby="dialog-title"><form method="dialog"><p class="eyebrow">A FRESH PERSPECTIVE</p><h2 id="dialog-title">Start a new session?</h2><p id="dialog-message">Unsaved progress will be replaced.</p><div class="dialog-actions"><button class="button secondary" value="cancel">Keep playing</button><button class="button primary" value="confirm">Continue</button></div></form></dialog>
+</body>
+</html>
