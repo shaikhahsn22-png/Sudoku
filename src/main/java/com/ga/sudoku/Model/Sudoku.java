@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 @Getter
 public class Sudoku {
+
     //two-dimensional array of SudokuCell: to arrange a table or grid with columns and rows
     private SudokuCell[][] sudokuBoard;
 
@@ -106,4 +107,5 @@ public class Sudoku {
             throw new SudokuFileNotFoundException("Cannot save sudoku solution to: "+filePath);
         }
     }
+
 }
